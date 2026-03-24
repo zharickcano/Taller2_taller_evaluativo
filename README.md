@@ -1,5 +1,8 @@
 # Taller Practica 1
 
+En el directorio * **`./formulario/`**: Esta todo el contenido realizado
+En el directorio * **`./temp/`**: Esta todo lo crudo rescatado del documento
+
 Errores encontrados en el texto crudo del documento
 
 ## Errores en el HTML
