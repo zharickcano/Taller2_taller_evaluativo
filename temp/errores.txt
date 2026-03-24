@@ -1,0 +1,6 @@
+Error 1: localizacion (assets/js/main.js linea 10) "===" que no deja que sirva el codigo
+
+Error 2: localizacion (assets/js/main.js linea 15) coreccion de string a int
+
+Error 2: localizacion (assets/js/main.js linea 26) cambio de nombre de nombre a n p , es  
+

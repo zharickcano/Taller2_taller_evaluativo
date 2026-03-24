@@ -1,0 +1,24 @@
+/* ¿Por qué el formulario se ve desalineado? */
+#main-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    width: 200px;
+}
+
+#main-container input
+{
+    width: 100%;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Mala práctica: Nombres no descriptivos y selectores acoplados */
+#registro-form div, label {   
+    font-weight: bold;
+}
+
+/* El alumno debe implementar Flexbox o Grid aquí para limpiar el diseño */
