@@ -1,43 +1,39 @@
 // Intento de validación
 const form = document.getElementById('registro-form'); // Error 1: ¿Es una clase o un ID?
 const boton = document.getElementById('btn-submit');
+const campoNombre = document.getElementById('usr_nm');
+const campoEdad = document.getElementById('age_val');
+const campoEmail = document.getElementById('correo_elect');
+const logNombre = document.getElementById("logNombre");
+const logEdad = document.getElementById("logEdad");
+const logCorreo = document.getElementById("logEmail");  
+const r = document.getElementById("registroFinal");
 const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
-//para dar enter y enviar formulario
+//para dar enter y enviar formulario por funcion anonima
+/*
 form.addEventListener("submit", function(e)
 {
     e.preventDefault(); // Evita que se recargue la página
-    procesarRegistro(); // Llamas a la misma función del botón
+    procesarRegistro();
 });
+*/ 
 
-//boton.addEventListener('click', procesarRegistro);
+//arrow functin
+form.addEventListener("submit",(e) =>
+{
+    e.preventDefault(); // eevita que se recargue la página
+    procesarRegistro();
+});
 
 function procesarRegistro()
 {
-    const nombre = document.getElementById('usr_nm').value;
-    const edad = document.getElementById('age_val').value;
-    const email = document.getElementById('correo_elect').value;
-    let edadInt = parseInt(edad,10);
-    // Error Lógico: La validación siempre pasa aunque esté vacío
-    
-    /* if (nombre == "") { 
-        alert("El nombre es obligatorio");
-    }
-
-    // Error de tipo: Comparación estricta con strings
-    if (edadInt >= 18) {
-        console.log("Es mayor de edad");
-    } else {
-        console.log("No cumple la edad");
-    }
-
-    if((regexEmail.test(email)) && (validaciones == 2))
-        enviarDatos(nombre);
-    else
-        alert("correo no valido")
-    */
-   if(validarDatos(nombre, edadInt, email))
+    //rescata los valores de los label
+    let nombre = campoNombre.value;
+    let edad = parseInt(campoEdad.value, 10);
+    let email = campoEmail.value;
+    if(validarDatos(nombre, edad, email))
         enviarDatos(nombre);
     else
         console.log("Datos Incorrectos");
@@ -45,9 +41,6 @@ function procesarRegistro()
 
 function validarDatos(n, e, c)
 {
-    const logNombre = document.getElementById("logNombre");
-    const logEdad = document.getElementById("logEdad");
-    const logCorreo = document.getElementById("logEmail");  
     let boolN = true;
     let boolE;
     let boolC;
@@ -90,10 +83,8 @@ function validarDatos(n, e, c)
 }
 
 function enviarDatos(n) {
-    const r = document.getElementById("registroFinal");
     r.style.color = "rgba(0, 255, 4, 0.918)";
     r.innerHTML = `<br>Registrando a ${n} 😁👌`;
-    // Error: Esta función intenta acceder a una variable que no existe fuera de scope
     console.log("Registrando a: " + n); 
     alert("Usuario registrado con éxito");
 }
