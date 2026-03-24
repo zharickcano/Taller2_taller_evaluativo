@@ -6,29 +6,27 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Formulario</title>
 </head>
-<body>  
-        <!-- Fragmento del Formulario -->
+<body>
     <section id="main-container">
         <form id="registro-form" action="#">
             <div class="input-group">
                 <label>Nombre Completo:</label>
                 <input type="text" id="usr_nm" name="username">
+                <div id="logNombre"></div><br>
             </div>
-            <div id="logNombre"></div><br>
 
             <div class="input-group">
                 <label>Edad:</label>
                 <input type="number" id="age_val">
+                <div id="logEdad"></div><br>
             </div>
-            <div id="logEdad"></div><br>
             
             <div class="input-group">
                 <label>Email:</label>
                 <input type="email" id="correo_elect">
-            </div>
             <div id="logEmail"></div><br>
-
-            <!-- Botón que por alguna razón no envía -->
+            </div>
+            
             <button type="submit" id="btn-submit">Enviar Registro</button>
             <div id="registroFinal"></div>
         </form>
